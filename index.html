@@ -25,7 +25,13 @@
       </div>
     </div>
     <script>
+      try
+      {
+        window.Telegram.WebApp.expand();
+      }catch(err)
+      {
 
+      }
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
@@ -115,8 +121,8 @@
               }).catch((message) => {
                 alert(message);
               });
-            window.Telegram.WebApp.ready();
-            window.Telegram.WebApp.expand();
+            
+            
             };
 
       document.body.appendChild(script);
